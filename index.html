@@ -1,47 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chatbot</title>
-<style>
-    #chatbox {
-        width: 300px;
-        height: 400px;
-        border: 1px solid #ccc;
-        overflow-y: scroll;
-        padding: 10px;
-    }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Legend School</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        header {
+            background: #007bff;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #0056b3;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 18px;
+        }
+        nav a:hover {
+            background: #003d82;
+            border-radius: 5px;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .hero {
+            background: url('https://source.unsplash.com/1200x500/?school,classroom') no-repeat center center/cover;
+            color: white;
+            padding: 100px 20px;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .section {
+            padding: 50px 20px;
+        }
+        .contact {
+            background: #0056b3;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-<div id="chatbox"></div>
-<form id="userInputForm">
-    <input type="text" id="userInput" placeholder="Type your message...">
-    <button type="submit">Send</button>
-</form>
 
-<script>
-    const chatbox = document.getElementById('chatbox');
-    const form = document.getElementById('userInputForm');
-    const userInput = document.getElementById('userInput');
+    <header>The Legend School</header>
 
-    form.addEventListener('submit', function(event) {
-        event.preventDefault();
-        const userMessage = userInput.value;
-        appendMessage('You: ' + userMessage);
-        // Here you can call your AI model to generate a response based on userMessage
-        // For simplicity, let's just echo the user's message back
-        const botMessage = 'Bot: ' + userMessage;
-        appendMessage(botMessage);
-        userInput.value = '';
-    });
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#courses">Courses</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-    function appendMessage(message) {
-        const messageElement = document.createElement('div');
-        messageElement.textContent = message;
-        chatbox.appendChild(messageElement);
-    }
-</script>
+    <div class="hero" id="home">
+        Welcome to The Legend School – Where Learning Meets Excellence!
+    </div>
+
+    <div class="container">
+        <section class="section" id="about">
+            <h2>About Us</h2>
+            <p>The Legend School is committed to providing high-quality education that nurtures young minds and prepares them for a bright future.</p>
+        </section>
+
+        <section class="section" id="courses">
+            <h2>Our Courses</h2>
+            <p>We offer a wide range of courses from primary to senior secondary levels, including Science, Arts, and Commerce streams.</p>
+        </section>
+    </div>
+
+    <div class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: contact@legendschool.com | Phone: +91 9876543210</p>
+        <p>Address: The Legend School, Patna, Bihar</p>
+    </div>
+
 </body>
-</html>
+          </html>
